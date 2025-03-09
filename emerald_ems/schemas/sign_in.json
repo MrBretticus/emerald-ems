@@ -1,0 +1,131 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Emerald EMS API Sign In Schema",
+	"type": "object",
+	"properties": {
+		"code": {
+			"type": "number"
+		},
+		"message": {
+			"type": "string"
+		},
+		"info": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string",
+					"format": "uuid"
+				},
+				"first_name": {
+					"type": "string"
+				},
+				"last_name": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"phone_no": {
+					"type": "string"
+				},
+				"agent_id": {},
+				"social_type": {},
+				"is_tc_accepted": {
+					"type": "number"
+				},
+				"status": {
+					"type": "string"
+				},
+				"deleted_by": {},
+				"zendesk_chat": {
+					"type": "number"
+				},
+				"feedback_status": {
+					"type": "boolean"
+				},
+				"weekly_report": {
+					"type": "boolean"
+				},
+				"subscribe": {
+					"type": "boolean"
+				},
+				"auto_sync": {
+					"type": "boolean"
+				},
+				"serverless": {
+					"type": "boolean"
+				},
+				"email_notification": {
+					"type": "boolean"
+				},
+				"push_notification": {
+					"type": "boolean"
+				},
+				"contact_form": {
+					"type": "boolean"
+				},
+				"safelink_policy": {
+					"type": "boolean"
+				},
+				"dd_news_offer": {
+					"type": "number"
+				},
+				"created_at": {
+					"type": "string"
+				},
+				"full_name": {
+					"type": "string"
+				},
+				"background_sync_count": {
+					"type": "number"
+				},
+				"pending_rating": {},
+				"feedback_form": {
+					"type": "boolean"
+				},
+				"location_permission_type": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"first_name",
+				"last_name",
+				"email",
+				"phone_no",
+				"agent_id",
+				"social_type",
+				"is_tc_accepted",
+				"status",
+				"deleted_by",
+				"zendesk_chat",
+				"feedback_status",
+				"weekly_report",
+				"subscribe",
+				"auto_sync",
+				"serverless",
+				"email_notification",
+				"push_notification",
+				"contact_form",
+				"safelink_policy",
+				"dd_news_offer",
+				"created_at",
+				"full_name",
+				"background_sync_count",
+				"pending_rating",
+				"feedback_form",
+				"location_permission_type"
+			]
+		},
+		"token": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"code",
+		"message",
+		"info",
+		"token"
+	]
+}

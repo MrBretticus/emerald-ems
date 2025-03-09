@@ -1,0 +1,50 @@
+[project]
+name = "emerald-ems"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Brett Errington", email = "253641+MrBretticus@users.noreply.github.com" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.12",
+    "brotli>=1.1.0",
+]
+
+[dependency-groups]
+lint = [
+    "ruff>=0.9.6",
+]
+test = [
+    "aioresponses>=0.7.8",
+    "jsf>=0.11.2",
+    "pytest>=8.3.4",
+    "pytest-aiohttp>=1.1.0",
+    "pytest-cov>=6.0.0",
+    "pytest-sugar>=1.0.0",
+    "python-dotenv>=1.0.1",
+]
+dev = [
+    "colorama>=0.4.6",
+]
+
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+python_files = ["test_*.py", "when_*.py"]
+python_functions = ["test_*", "it_*"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope="session"
+log_cli = true
+log_cli_level = "WARNING" # pass --log-cli-level INFO to print logs
+log_cli_format = "%(name)s %(levelname)s %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+markers = [
+	"integration: marks a test as running against a real API"
+]
+addopts = "-m 'not integration'" # "-v"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]

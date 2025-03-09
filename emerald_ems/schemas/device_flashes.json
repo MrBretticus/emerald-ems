@@ -1,0 +1,228 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Emerald EMS API Device Flashes Schema",
+	"type": "object",
+	"properties": {
+		"code": {
+			"type": "number"
+		},
+		"message": {
+			"type": "string"
+		},
+		"info": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"daily_trend": {
+					"type": "number"
+				},
+				"monthly_trend": {
+					"type": "number"
+				},
+				"synced_timestamp": {
+					"type": "number"
+				},
+				"average_daily_spend": {
+					"type": "number"
+				},
+				"is_newyear_issue_fixed": {
+					"type": "boolean"
+				},
+				"force_sync_date": {},
+				"date_error_exists": {
+					"type": "boolean"
+				},
+				"ihd_reset_date": {},
+				"is_day_light_savings_on": {
+					"type": "boolean"
+				},
+				"is_china_newyear_issue_fixed": {
+					"type": "boolean"
+				},
+				"device_type": {},
+				"daily_consumptions": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"total_consumption_of_day": {
+								"type": "number"
+							},
+							"average_daily_spend": {
+								"type": "number"
+							},
+							"created_at": {
+								"type": "string"
+							},
+							"daily_trend": {
+								"type": "number"
+							},
+							"monthly_trend": {
+								"type": "number"
+							},
+							"synced_timestamp": {
+								"type": "number"
+							},
+							"ten_minute_consumptions": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"cost": {
+											"type": "number"
+										},
+										"hideen": {
+											"type": "boolean"
+										},
+										"rate": {},
+										"loadTypeKey": {},
+										"number_of_flashes": {
+											"type": "number"
+										},
+										"id": {
+											"type": "string"
+										},
+										"is_complete": {
+											"type": "boolean"
+										},
+										"time_string": {
+											"type": "string"
+										},
+										"kwh": {
+											"type": "number"
+										}
+									},
+									"required": [
+										"cost",
+										"hideen",
+										"rate",
+										"loadTypeKey",
+										"number_of_flashes",
+										"id",
+										"is_complete",
+										"time_string",
+										"kwh"
+									]
+								}
+							},
+							"hourly_consumptions": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"cost": {
+											"type": "number"
+										},
+										"rate": {},
+										"loadTypeKey": {},
+										"number_of_flashes": {
+											"type": "number"
+										},
+										"unit_charge": {},
+										"id": {
+											"type": "string"
+										},
+										"is_complete": {
+											"type": "boolean"
+										},
+										"kwh": {
+											"type": "number"
+										},
+										"hour_string": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"cost",
+										"rate",
+										"loadTypeKey",
+										"number_of_flashes",
+										"unit_charge",
+										"id",
+										"is_complete",
+										"kwh",
+										"hour_string"
+									]
+								}
+							},
+							"total_kwh_of_day": {
+								"type": "number"
+							},
+							"device_id": {
+								"type": "string"
+							},
+							"is_complete": {
+								"type": "boolean"
+							},
+							"is_china_newyear_issue_fixed": {
+								"type": "boolean"
+							},
+							"total_cost_of_day": {
+								"type": "number"
+							},
+							"actual_consumptions": {},
+							"is_newyear_issue_fixed": {
+								"type": "boolean"
+							},
+							"date_string": {
+								"type": "string"
+							},
+							"device_type": {
+								"type": "string"
+							},
+							"date_int": {
+								"type": "number"
+							},
+							"id": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"total_consumption_of_day",
+							"average_daily_spend",
+							"created_at",
+							"daily_trend",
+							"monthly_trend",
+							"synced_timestamp",
+							"ten_minute_consumptions",
+							"hourly_consumptions",
+							"total_kwh_of_day",
+							"device_id",
+							"is_complete",
+							"is_china_newyear_issue_fixed",
+							"total_cost_of_day",
+							"actual_consumptions",
+							"is_newyear_issue_fixed",
+							"date_string",
+							"device_type",
+							"date_int",
+							"id"
+						]
+					}
+				}
+			},
+			"required": [
+				"id",
+				"daily_trend",
+				"monthly_trend",
+				"synced_timestamp",
+				"average_daily_spend",
+				"is_newyear_issue_fixed",
+				"force_sync_date",
+				"date_error_exists",
+				"ihd_reset_date",
+				"is_day_light_savings_on",
+				"is_china_newyear_issue_fixed",
+				"device_type",
+				"daily_consumptions"
+			]
+		}
+	},
+	"required": [
+		"code",
+		"message",
+		"info"
+	]
+}

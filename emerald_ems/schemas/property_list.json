@@ -1,0 +1,503 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Emerald EMS API Property List Schema",
+	"type": "object",
+	"properties": {
+		"code": {
+			"type": "number"
+		},
+		"message": {
+			"type": "string"
+		},
+		"info": {
+			"type": "object",
+			"properties": {
+				"property": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string"
+							},
+							"customer_id": {
+								"type": "string"
+							},
+							"property_name": {
+								"type": "string"
+							},
+							"house_no": {},
+							"unit_number": {},
+							"street_type": {
+								"type": "string"
+							},
+							"street": {
+								"type": "string"
+							},
+							"city": {
+								"type": "string"
+							},
+							"unit_type": {},
+							"level_type": {},
+							"level_number": {},
+							"street_number": {
+								"type": "string"
+							},
+							"street_suffix": {},
+							"state": {
+								"type": "string"
+							},
+							"postal_code": {
+								"type": "string"
+							},
+							"address_type": {
+								"type": "string"
+							},
+							"premium": {
+								"type": "string"
+							},
+							"is_structure_deleted": {
+								"type": "number"
+							},
+							"accessibility": {
+								"type": "boolean"
+							},
+							"is_structure_updated": {
+								"type": "number"
+							},
+							"created_at": {
+								"type": "string"
+							},
+							"updated_at": {
+								"type": "string"
+							},
+							"property_type": {
+								"type": "string"
+							},
+							"tariff_structure": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"calculated_supply_charge": {
+											"type": "number"
+										},
+										"calculated_unit_charge": {
+											"type": "number"
+										},
+										"company_id": {
+											"type": "string"
+										},
+										"discount_percentage": {
+											"type": "number"
+										},
+										"discount_type": {
+											"type": "string"
+										},
+										"electricity_retailer_id": {
+											"type": "string"
+										},
+										"end_date": {},
+										"gst_include": {
+											"type": "number"
+										},
+										"impluse_rate": {},
+										"is_flat_rate": {
+											"type": "number"
+										},
+										"same_as_weekdays": {},
+										"property_id": {
+											"type": "string"
+										},
+										"start_date": {
+											"type": "string"
+										},
+										"supply_charge": {
+											"type": "number"
+										},
+										"supply_charge_discount": {
+											"type": "number"
+										},
+										"tariff_seasonal": {},
+										"tariff_plan": {},
+										"tariff_structure_id": {
+											"type": "string"
+										},
+										"type": {},
+										"unit_charge": {
+											"type": "number"
+										}
+									},
+									"required": [
+										"calculated_supply_charge",
+										"calculated_unit_charge",
+										"company_id",
+										"discount_percentage",
+										"discount_type",
+										"electricity_retailer_id",
+										"end_date",
+										"gst_include",
+										"impluse_rate",
+										"is_flat_rate",
+										"same_as_weekdays",
+										"property_id",
+										"start_date",
+										"supply_charge",
+										"supply_charge_discount",
+										"tariff_seasonal",
+										"tariff_plan",
+										"tariff_structure_id",
+										"type",
+										"unit_charge"
+									]
+								}
+							},
+							"member_count": {
+								"type": "number"
+							},
+							"property_spaces": {},
+							"devices": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"serial_number": {
+											"type": "string"
+										},
+										"device_identifier": {},
+										"property_id": {
+											"type": "string"
+										},
+										"device_type_id": {},
+										"device_category": {},
+										"pairing_code": {
+											"type": "string"
+										},
+										"brand": {
+											"type": "string"
+										},
+										"model": {
+											"type": "string"
+										},
+										"device_type": {
+											"type": "string"
+										},
+										"firmware_version": {
+											"type": "string"
+										},
+										"device_mac_address": {
+											"type": "string"
+										},
+										"device_uid": {},
+										"device_name": {
+											"type": "string"
+										},
+										"installer_id": {
+											"type": "string"
+										},
+										"agency_id": {
+											"type": "string"
+										},
+										"customer_id": {
+											"type": "string"
+										},
+										"parent_agency_id": {
+											"type": "string"
+										},
+										"agency_name": {
+											"type": "string"
+										},
+										"agent_name": {
+											"type": "string"
+										},
+										"installer_uuid": {
+											"type": "string"
+										},
+										"customer_status": {
+											"type": "string"
+										},
+										"installed_by": {
+											"type": "string"
+										},
+										"passcode": {},
+										"installation_date": {
+											"type": "string"
+										},
+										"NMI": {
+											"type": "string"
+										},
+										"impulse_rate": {
+											"type": "number"
+										},
+										"battery": {
+											"type": "number"
+										},
+										"force_update": {
+											"type": "number"
+										},
+										"device_status": {
+											"type": "string"
+										},
+										"delete_reason": {},
+										"first_report": {
+											"type": "number"
+										},
+										"installation_type": {
+											"type": "string"
+										},
+										"replace_id": {},
+										"last_data_timestamp": {
+											"type": "string"
+										},
+										"cell_name": {
+											"type": "string"
+										},
+										"gateway_conn_id": {},
+										"premium": {},
+										"premium_validity": {},
+										"downloaded_at": {},
+										"is_china_newyear_issue_fixed": {
+											"type": "number"
+										},
+										"is_day_light_savings_on": {
+											"type": "boolean"
+										},
+										"is_april_daylight_fixed": {
+											"type": "boolean"
+										},
+										"force_sync_date": {},
+										"date_error_exists": {
+											"type": "number"
+										},
+										"ihd_reset_date": {},
+										"created_at": {
+											"type": "string"
+										},
+										"updated_at": {
+											"type": "string"
+										},
+										"replaced_at": {},
+										"nmi": {
+											"type": "string"
+										},
+										"impulse_rate_type": {
+											"type": "string"
+										},
+										"impulse_rates": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"start_date": {
+														"type": "string"
+													},
+													"end_date": {
+														"type": "string"
+													},
+													"impulse_rate": {
+														"type": "number"
+													},
+													"impulse_rate_type": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"start_date",
+													"impulse_rate",
+													"impulse_rate_type"
+												]
+											}
+										},
+										"ota_update": {},
+										"location": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string"
+												},
+												"device_id": {
+													"type": "string"
+												},
+												"property_id": {
+													"type": "string"
+												},
+												"latitude": {
+													"type": "number"
+												},
+												"longitude": {
+													"type": "number"
+												},
+												"radius": {
+													"type": "number"
+												},
+												"created_at": {
+													"type": "string"
+												},
+												"updated_at": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"device_id",
+												"property_id",
+												"latitude",
+												"longitude",
+												"radius",
+												"created_at",
+												"updated_at"
+											]
+										}
+									},
+									"required": [
+										"id",
+										"serial_number",
+										"device_identifier",
+										"property_id",
+										"device_type_id",
+										"device_category",
+										"pairing_code",
+										"brand",
+										"model",
+										"device_type",
+										"firmware_version",
+										"device_mac_address",
+										"device_uid",
+										"device_name",
+										"installer_id",
+										"agency_id",
+										"customer_id",
+										"parent_agency_id",
+										"agency_name",
+										"agent_name",
+										"installer_uuid",
+										"customer_status",
+										"installed_by",
+										"passcode",
+										"installation_date",
+										"NMI",
+										"impulse_rate",
+										"battery",
+										"force_update",
+										"device_status",
+										"delete_reason",
+										"first_report",
+										"installation_type",
+										"replace_id",
+										"last_data_timestamp",
+										"cell_name",
+										"gateway_conn_id",
+										"premium",
+										"premium_validity",
+										"downloaded_at",
+										"is_china_newyear_issue_fixed",
+										"is_day_light_savings_on",
+										"is_april_daylight_fixed",
+										"force_sync_date",
+										"date_error_exists",
+										"ihd_reset_date",
+										"created_at",
+										"updated_at",
+										"replaced_at",
+										"nmi",
+										"impulse_rate_type",
+										"impulse_rates",
+										"ota_update",
+										"location"
+									]
+								}
+							},
+							"budget": {},
+							"location": {},
+							"livelinks": {
+								"type": "array",
+								"items": {}
+							},
+							"safelinks": {
+								"type": "array",
+								"items": {}
+							},
+							"heat_pump": {
+								"type": "array",
+								"items": {}
+							}
+						},
+						"required": [
+							"id",
+							"customer_id",
+							"property_name",
+							"house_no",
+							"unit_number",
+							"street_type",
+							"street",
+							"city",
+							"unit_type",
+							"level_type",
+							"level_number",
+							"street_number",
+							"street_suffix",
+							"state",
+							"postal_code",
+							"address_type",
+							"premium",
+							"is_structure_deleted",
+							"accessibility",
+							"is_structure_updated",
+							"created_at",
+							"updated_at",
+							"property_type",
+							"tariff_structure",
+							"member_count",
+							"property_spaces",
+							"devices",
+							"budget",
+							"location",
+							"livelinks",
+							"safelinks",
+							"heat_pump"
+						]
+					}
+				},
+				"shared_property": {
+					"type": "array",
+					"items": {}
+				},
+				"badge_count": {
+					"type": "number"
+				},
+				"homepage_slider": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"image": {
+								"type": "string"
+							},
+							"link": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"image",
+							"link"
+						]
+					}
+				}
+			},
+			"required": [
+				"property",
+				"shared_property",
+				"badge_count",
+				"homepage_slider"
+			]
+		}
+	},
+	"required": [
+		"code",
+		"message",
+		"info"
+	]
+}
