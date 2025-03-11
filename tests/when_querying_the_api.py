@@ -17,6 +17,7 @@ from emerald_ems.const import (
 from emerald_ems.exceptions import (
 	EmeraldApiClientAuthenticationError,
 	EmeraldApiClientCommunicationError,
+	EmeraldApiClientResponseError,
 	EmeraldApiClientError
 )
 
@@ -52,6 +53,17 @@ async def it_should_handle_communication_errors(responses:aioresponses, sign_in:
 	)
 
 	with pytest.raises(EmeraldApiClientCommunicationError):
+		await sign_in()
+
+async def it_should_handle_response_errors_with_json(responses:aioresponses, sign_in:TSignIn):
+	responses.post(
+		url=SIGN_IN_URL,
+		status=500,
+		reason='Internal Server Error',
+		payload={ 'error': { 'message': 'Testing' } }
+	)
+
+	with pytest.raises(EmeraldApiClientResponseError, match=r'.*Testing'):
 		await sign_in()
 
 async def it_should_handle_generic_errors(responses:aioresponses, sign_in:TSignIn):

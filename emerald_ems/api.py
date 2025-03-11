@@ -110,10 +110,15 @@ class EmeraldApiClient:
 				url=url,
 				headers=headers,
 				json=data,
-				raise_for_status=True
+				raise_for_status=False
 			)
+
+			if response.content_type == 'application/json':
+				json = await response.json()
+
+			response.raise_for_status() # raise after request so we can inspect response
 			
-			return await response.json()
+			return json
 		except ClientResponseError as error:
 			if error.status == 401:
 				raise EmeraldApiClientAuthenticationError(
@@ -124,7 +129,12 @@ class EmeraldApiClient:
 					'Authorisation failed'
 				)
 			
-			raise EmeraldApiClientResponseError(f'Error {error.status}: {error.message}')
+			message:str = error.message
+
+			if json and 'error' in json:
+				message = json['error']['message']
+			
+			raise EmeraldApiClientResponseError(f'Error {error.status}: {message}')
 
 		except asyncio.TimeoutError as exception:
 			raise EmeraldApiClientCommunicationError(
@@ -138,5 +148,5 @@ class EmeraldApiClient:
 			raise
 		except Exception as exception:  # pylint: disable=broad-except
 			raise EmeraldApiClientError(
-				"Something really wrong happened!"
+				str(exception)
 			) from exception
